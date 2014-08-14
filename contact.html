@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Contact Eric Bréchemier</title>
+    <meta name="description"
+      content="
+        Open the discussion by telling me about your project.
+        I can help you to make it international with style:
+        local, worldwide.
+      "
+    />
+    <link rel="stylesheet" type="text/css"
+      href="styles/page.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="index.html">
+          <img class="logo" alt="i18n.fr" src="images/i18nfr.png" />
+        </a>
+      </h1>
+    </header>
+
+    <h2>Contact "Eric Bréchemier" &lt;eric@i18n.fr&gt;</h2>
+    <p>
+      Open the discussion by telling me about your project.<br/>
+      I can help you to make it international with style:
+      <em>local</em>, worldwide.
+    </p>
+    <div class="map-box" style="position: relative; width: 600px; height: 503px;">
+      <img
+        class="map-layer map" style="position: absolute;"
+        alt="World Map (1840)"
+        title="
+          The world,
+          on Mercator's projection,
+          by David H. Burr
+          engraved by S. Stiles & Co.,
+          N. York. (1840)
+        "
+        width="600" height="503"
+        src="images/world_map_600x503.png"
+      />
+      <!-- TODO: add red dot, in SVG -->
+
+      <svg xmlns="http://www.w3.org/2000/svg"
+        class="map-layer" style="position: absolute; overflow: visible;"
+        width="600" height="503"
+      >
+        <circle class="map-location-marker" fill="#E01010" opacity="0.5"
+          cx="302" cy="184"
+          r="10"
+        />
+      </svg>
+
+      <div class="map-layer address" style="background-color: rgba(255,255,255,0.5); border-radius: 10px; padding: 10px; position: absolute; top: 160px; left: 320px;">
+        <a href="mailto:eric@i18n.fr">Eric Bréchemier</a></br>
+        94 rue des Pèlerins<br/>
+        60200 Compiègne<br/>
+        France
+      </div>
+    </div>
+
+  </body>
+</html>
