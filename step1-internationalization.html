@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Step 1: Internationalization</title>
+    <meta name="description"
+      content="
+        Internationalization (i18n)
+        consists in extracting all the text and formatting
+        specific to a single language,
+        to make your web site or application
+        in more than one language.
+      "
+    />
+    <link rel="stylesheet" type="text/css"
+      href="styles/page.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="index.html">
+          <img class="logo" alt="i18n.fr" src="images/i18nfr.png" />
+        </a>
+      </h1>
+    </header>
+
+    <h2>Step 1: Internationalization</h2>
+    <p>
+      Internationalization (i18n) consists in extracting all the text
+      and formatting specific to a single language, to make your web
+      site or application in more than one language.
+    </p>
+    <p>
+      For example:
+      <code>"i18n.fr is very helpful."</code>
+      becomes
+      <code>"#about.service#"</code>.
+    </p>
+    <p>
+      A string of text has been replaced with a key,
+      <code>about.service</code>,
+      which will be used to retrieve the text
+      in a language property file.
+    </p>
+    <p>
+      This is the first step of the conversion process
+      from a monolingual to a multicultural web site.
+    </p>
+    <p>
+      <img
+        width="900" height="578"
+        src="images/step1_900x578.jpg"
+      />
+    </p>
+    <h3>A common pitfall: Concatenation</h3>
+    <p>
+      During the internationalization process,
+      it is common to create keys
+      for parts of sentences
+      to keep variable parts outside the key.
+    </p>
+    <p>
+      For example:
+      <code>"There are"</code> and <code>"items in your basket."</code>
+    </p>
+    <p>
+      The keys are then concatenated with a value
+      to make up the whole sentence.
+      This leads to issues at the next step,
+      when trying to translate each key
+      in a different language.
+    </p>
+    <p>
+      It is better to use <em>templates</em>
+      with <em>parameters</em> to replace inserted
+      in the text to translate:
+    </p>
+    <p>
+      <code>"There are #basket.count# items in your basket."</code>
+    </p>
+    <p>
+      <code>#basket.count#</code> is a placeholder
+      that marks the place
+      where the number of items
+      will be inserted.
+    </p>
+    <p>
+      The <code>#</code> signs are <em>separators</em>:
+      they surround the <em>name</em> of the <em>parameter</em>,
+      <code>basket.count</code>,
+      and make it stand out,
+      apart from the text before and the text after.
+    </p>
+    <nav>
+      <ol>
+        <li>
+          <a href="step1-internationalization.html">
+            <img alt="" class="nav-thumbnail"
+              src="images/step1_280x188.jpg"
+            />
+            Step 1: Internationalization
+          </a>
+        </li>
+        <li>
+          <a href="step2-localization.html">
+            <img alt="" class="nav-thumbnail"
+              src="images/step2_280x188.jpg"
+            />
+            Step 2: Localization
+          </a>
+        </li>
+        <li>
+          <a href="step3-language-selection.html">
+            <img alt="" class="nav-thumbnail"
+              src="images/step3_280x188.jpg"
+            />
+            Step 3: Language Selection
+          </a>
+        </li>
+      </ol>
+    </nav>
+  </body>
+</html>

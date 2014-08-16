@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Step 2: Localization</title>
+    <meta name="description"
+      content="
+        Localization (L10n)
+        involves the translation of language properties
+        and the adaptation of styles and functions
+        to a different language or culture.
+      "
+    />
+    <link rel="stylesheet" type="text/css"
+      href="styles/page.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="index.html">
+          <img class="logo" alt="i18n.fr" src="images/i18nfr.png" />
+        </a>
+      </h1>
+    </header>
+
+    <h2>Step 2: Localization</h2>
+    <p>
+      The next step is Localization (L10n),
+      which involves the translation of <em>language properties</em>
+      and the adaptation of styles and functions
+      to a different language or culture.
+    </p>
+    <p>
+      This is typically a back and forth process
+      with <a href="step1-internationalization.html">Internationalization</a>,
+      when new <em>language properties</em> must be added,
+      or translations must be updated
+      when the initial text is modified.
+    </p>
+    <p>
+      For example, a translator will receive
+      the following <em>language property</em> in English:
+    </p>
+    <p>
+      <code>about.service: "i18n.fr is very helpful."</code>
+    </p>
+    <p>
+      and will translate it to French:
+    </p>
+    <p>
+      <code>about.service: "i18n.fr est très utile."</code>
+    </p>
+    <p>
+      Each <em>language property</em> is made of two parts:
+    </p>
+    <ol>
+      <li>
+        the <em>key</em>, here <code>about.service</code>,
+        identifies the property across translations;<br/>
+        it is the <strong>fixed</strong> part of the property.
+      </li>
+      <li>
+        the <em>value</em> is the <strong>variable</strong> part
+        which changes from language to language:<br />
+        here <code>"i18n.fr&nbsp;is&nbsp;very&nbsp;helpful."</code> in English
+        and <code>"i18n.fr&nbsp;est&nbsp;très&nbsp;utile."</code> in French.
+      </li>
+    </ol>
+    <p>
+      <img
+        width="900" height="833"
+        src="images/step2_900x833.jpg"
+      />
+    </p>
+    <h3>Pitfalls: Pluralization and Gender Agreement</h3>
+    <p>
+      A static transformation of text
+      is not enough for a full Localization:
+      logic is needed
+      to take into account
+      plural and gender agreement.
+    </p>
+    <p>
+      This is typically done with functions
+      written in a programming language,
+      for example:
+    </p>
+<pre>
+function(context){
+  var count = context["basket.count"];
+  switch(count){
+    case 0:
+      return "There are no items in your basket.";
+    case 1:
+      return "There is 1 item in your basket.";
+    default:
+      return "There are "+count+" items in your basket.";
+  }
+}
+</pre>
+    <p>
+      The
+      <a href="http://unicode.org/repos/cldr-tmp/trunk/diff/supplemental/language_plural_rules.html"
+        >Language Plural Rules</a>
+      vary depending on the language.
+      singular and plural are not enough
+      to describe these rules:
+      some languages have different forms of plural,
+      for example,
+      for 2, 12 and 100 items.
+    </p>
+    <p>
+      It is sometimes possible
+      to define separate <em>language properties</em>
+      for each <em>category</em> of singular and plural;
+      in this case the complexity becomes to select
+      the correct <em>language property</em>
+      depending on the context:
+    </p>
+<pre>
+basket.items.zero:  "There are no items in your basket."
+basket.items.one:   "There is 1 item in your basket."
+basket.items.other: "There are #basket.count# items in your basket."
+</pre>
+    <nav>
+      <ol>
+        <li>
+          <a href="step1-internationalization.html">
+            <img alt="" class="nav-thumbnail"
+              src="images/step1_280x188.jpg"
+            />
+            Step 1: Internationalization
+          </a>
+        </li>
+        <li>
+          <a href="step2-localization.html">
+            <img alt="" class="nav-thumbnail"
+              src="images/step2_280x188.jpg"
+            />
+            Step 2: Localization
+          </a>
+        </li>
+        <li>
+          <a href="step3-language-selection.html">
+            <img alt="" class="nav-thumbnail"
+              src="images/step3_280x188.jpg"
+            />
+            Step 3: Language Selection
+          </a>
+        </li>
+      </ol>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Step 3: Language Selection</title>
+    <meta name="description"
+      content="Adding the option to select the language."
+    />
+    <link rel="stylesheet" type="text/css"
+      href="styles/page.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="index.html">
+          <img class="logo" alt="i18n.fr" src="images/i18nfr.png" />
+        </a>
+      </h1>
+    </header>
+
+    <h2>Step 3: Language Selection</h2>
+    <p>
+      Congratulations!
+      You are now ready for the final step:
+      adding the option to select the language.
+    </p>
+    <p>
+      The selection may be done automatically in JavaScript
+      based on the <em>language</em> property
+      read in the <code>navigator</code> object of the browser,
+      for example <code>fr-FR</code> for French/France.
+    </p>
+    <p>
+      Alternatively,
+      the language selection may be proposed as a list
+      available either in all pages
+      or only in the application settings.
+    </p>
+    <p>
+      Besides, for testing purpose,
+      it is convenient to allow changing the language
+      by adding a parameter in the URL.
+    </p>
+    <p>
+      <img
+        width="789" height="1200"
+        src="images/step3_789x1200.jpg"
+      />
+    </p>
+    <h3>Common pitfall: Search Engine Optimization</h3>
+    <p>
+      Is your multilingual content visible to search engines?
+      Depending on the technique used
+      to select and advertise the language,
+      your contents may be indexed
+      only in English,
+      or not at all.
+    </p>
+    <p>
+      Extra attention is needed
+      to ensure that static contents
+      is available to search engines
+      in all available languages:
+      the HTML page must include a <code>lang</code> attribute
+      with the <em>language tag</em>,
+      e.g. <code>lang="en"</code> for English
+      and <code>lang="fr"</code> for French.
+    </p>
+    <p>
+      It is also possible to include several languages
+      within the same HTML document
+      by tagging each part with the relevant <em>language tag</em>.
+    </p>
+    <nav>
+      <ol>
+        <li>
+          <a href="step1-internationalization.html">
+            <img alt="" class="nav-thumbnail"
+              src="images/step1_280x188.jpg"
+            />
+            Step 1: Internationalization
+          </a>
+        </li>
+        <li>
+          <a href="step2-localization.html">
+            <img alt="" class="nav-thumbnail"
+              src="images/step2_280x188.jpg"
+            />
+            Step 2: Localization
+          </a>
+        </li>
+        <li>
+          <a href="step3-language-selection.html">
+            <img alt="" class="nav-thumbnail"
+              src="images/step3_280x188.jpg"
+            />
+            Step 3: Language Selection
+          </a>
+        </li>
+      </ol>
+    </nav>
+  </body>
+</html>
