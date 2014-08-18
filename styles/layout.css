@@ -50,6 +50,7 @@ nav > ol > li {
 
 .nav-layer {
   left: 0.5em;
+  right: 0.5em;
   bottom: 1em;
   padding: 0.5em;
 }
