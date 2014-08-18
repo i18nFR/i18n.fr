@@ -34,13 +34,13 @@ img {
   height: 100%;
 }
 
-nav > ol > li,
+.nav-item,
 img.nav-thumbnail {
   display: inline-block;
   max-width: 14em;
 }
 
-nav > ol > li {
+.layer-box {
   position: relative;
 }
 
