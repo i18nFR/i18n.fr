@@ -1,0 +1,23 @@
+body, nav {
+  border-radius: 1em;
+}
+
+.layer {
+  border-radius: 0.5em;
+}
+
+nav {
+  overflow: hidden;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  border: none;
+}
