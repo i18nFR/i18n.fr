@@ -66,3 +66,7 @@ img.nav-thumbnail {
 .map-layer {
   overflow: visible;
 }
+
+.hero-box {
+  display: block;
+}
