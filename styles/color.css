@@ -18,8 +18,11 @@ a:hover {
   color: #567;
 }
 
-.layer {
+.text-overlay {
   background-color: rgba(255,255,255,0.4);
 }
 
-
+.map-location-marker {
+  fill: #E01010;
+  opacity: 0.5;
+}

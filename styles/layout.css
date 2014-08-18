@@ -52,7 +52,17 @@ img.nav-thumbnail {
   left: 0.5em;
   right: 0.5em;
   bottom: 1em;
+}
+
+.text-overlay {
   padding: 0.5em;
 }
 
+.map-box {
+  width: 600px;
+  height: 503px;
+}
 
+.map-layer {
+  overflow: visible;
+}

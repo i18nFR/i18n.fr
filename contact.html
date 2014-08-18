@@ -35,9 +35,9 @@
       <em>local</em>, worldwide.
     </p>
 
-    <div class="map-box" style="position: relative; width: 600px; height: 503px;">
+    <div class="layer-box map-box">
       <img
-        class="map-layer map" style="position: absolute;"
+        class="layer map-layer"
         alt="World Map (1840)"
         title="
           The world,
@@ -49,24 +49,24 @@
         width="600" height="503"
         src="images/world_map_600x503.png"
       />
-      <!-- TODO: add red dot, in SVG -->
-
       <svg xmlns="http://www.w3.org/2000/svg"
-        class="map-layer" style="position: absolute; overflow: visible;"
+        class="layer map-layer"
         width="600" height="503"
       >
-        <circle class="map-location-marker" fill="#E01010" opacity="0.5"
+        <circle class="map-location-marker"
           cx="302" cy="184"
           r="10"
         />
       </svg>
 
-      <div class="map-layer address" style="background-color: rgba(255,255,255,0.5); border-radius: 10px; padding: 10px; position: absolute; top: 160px; left: 320px;">
+      <address class="layer map-layer text-overlay"
+        style="top: 160px; left: 320px;"
+      >
         <a href="mailto:eric@i18n.fr">Eric Bréchemier</a></br>
         94 rue des Pèlerins<br/>
         60200 Compiègne<br/>
         France
-      </div>
+      </address>
     </div>
 
     <p>
