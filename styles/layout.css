@@ -17,8 +17,15 @@ h1, h2, h3, p, ul, ol, li {
   padding: 0;
 }
 
-h1, h2, h3, p {
+h1, h2, h3,
+p,
+ul.bullet > li,
+ol.numbered > li {
   margin: 1em 0;
+}
+
+ul.bullet > li {
+  margin-left: 1.5em;
 }
 
 header {
@@ -69,4 +76,5 @@ img.nav-thumbnail {
 
 .hero-box {
   display: block;
+  margin: 2em 0;
 }

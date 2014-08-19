@@ -14,6 +14,14 @@ ul, ol {
   list-style-type: none;
 }
 
+ul.bullet {
+  list-style-type: disc;
+}
+
+ol.numbered {
+  list-style-type: decimal;
+}
+
 a {
   text-decoration: none;
   outline-style: none;
